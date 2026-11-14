@@ -27,38 +27,47 @@
       <h1>Delete Account</h1>
     </header>
 
-    <p>There are two ways to delete your data. The in-app button erases your workout data. Removing your Google sign-in account as well needs a request by email.</p>
+    <p>There are two ways to delete your data: from inside the app, or by email. Which in-app button you have depends on your version of the app.</p>
 
     <h2>Option 1: Delete from inside the app</h2>
+    <p><strong>In versions of the app that include Settings &gt; Delete account:</strong></p>
     <ol>
       <li>Open the Iron Commissar app.</li>
       <li>Go to <strong>Settings</strong>.</li>
-      <li>Tap <strong>Erase all data</strong>. <!-- TODO after release: rename "Erase all data" to "Delete account" --></li>
-      <li>Confirm in the two pop-ups that appear.</li>
+      <li>Tap <strong>Delete account</strong>.</li>
+      <li>Confirm when asked.</li>
     </ol>
-    <p>The app then erases all your workout data from your phone and from our cloud database, and signs you out. <strong>This button does not remove your sign-in account</strong> (the Google sign-in record held by our authentication provider, Supabase). To remove that too, use Option 2.</p>
+    <p>In those versions, deletion on our servers is immediate. If the app is closed or loses its connection during the process, it finishes cleaning up your phone the next time it opens with a connection. Your other devices will be signed out the next time they connect. Data already saved on them stays there until you erase it on that device or uninstall the app.</p>
+    <p>In older versions of the app, the "Erase all data" button removes much of your data from your device and our cloud database, but does not remove everything: it does not remove your sign-in account, program progress, trophies, or some other server records. If you use an older version, email us to have your account and data deleted, or update the app if a version that includes Settings &gt; Delete account is available for your device.</p>
 
     <h2>Option 2: Request full account deletion</h2>
-    <p>Use this if you have uninstalled the app, or if you want your sign-in account removed as well. Email <a href="mailto:dddruwu@gmail.com?subject=Delete%20my%20Iron%20Commissar%20account">dddruwu@gmail.com</a> with the subject <strong>Delete my Iron Commissar account</strong>. Send it from the email address of the Google account you signed in with, so we can match the request to your account.</p>
-    <!-- Wording follows the privacy policy, which says data is deleted "within a reasonable timeframe".
-         TODO: if you want to promise a specific number of days, add it here AND in the policy (section 4) so they match. -->
-    <p>We will delete your account data within a reasonable timeframe, except where retention is required by law.</p>
+    <p>Use this if you use an older version of the app that only has Erase all data, or if you have uninstalled the app. Email <a href="mailto:dddruwu@gmail.com?subject=Delete%20my%20Iron%20Commissar%20account">dddruwu@gmail.com</a> with the subject <strong>Delete my Iron Commissar account</strong>. Send it from the email address of the Google account you signed in with, so we can match the request to your account. We may need to confirm that the request really comes from that account.</p>
+    <p>We complete email deletion requests within 30 days.</p>
+    <p>If you use the App as a guest, your data is stored only on your phone, so we cannot find it by email. In versions of the app that include Settings &gt; Delete account, use "Delete my data" in the app. In any version, you can also uninstall the app.</p>
 
     <h2>What gets deleted</h2>
-    <p><strong>Workout data</strong> (Option 1 or Option 2), from your phone and from our cloud database:</p>
+    <p><strong>In versions of the app that include Settings &gt; Delete account</strong>, from our cloud database:</p>
     <ul>
-      <li>Workout history</li>
-      <li>Routines</li>
+      <li>Your workout sessions and the logs inside them</li>
+      <li>Personal records</li>
+      <li>Program progress and trophies</li>
+      <li>Routines and their blocks</li>
+      <li>Complex templates</li>
       <li>Kettlebells</li>
       <li>Custom exercises</li>
-      <li>Personal records</li>
     </ul>
-    <p><strong>Sign-in account</strong> (Option 2 only), the Google sign-in record held by Supabase:</p>
+    <p>In those versions, if you are signed in, it also deletes your purchase record held by our subscription provider, RevenueCat, and then deletes your sign-in account (your email address, name and profile photo, held by Supabase).</p>
+    <p>In those versions, the app removes your workout data, settings, trophies, scheduled notifications and files it created (the exported history file and temporary image files) from your phone.</p>
+    <p>If you email us, we delete your data and your sign-in account.</p>
+
+    <h2>What is not deleted</h2>
     <ul>
-      <li>Email address</li>
-      <li>Name</li>
-      <li>Profile photo</li>
+      <li>Records held by Google, such as Google Play purchase records and Google's advertising services, are managed by Google and are not deleted by us.</li>
+      <li>If you use the app as a guest, your purchase record, identified only by a random ID, is not deleted by the app.</li>
+      <li>Data already saved on your other devices stays there until you erase it on that device or uninstall the app.</li>
     </ul>
+    <!-- REVISIT: backups line. If the project moves to a paid Supabase plan with backups, this line must be updated. -->
+    <p>We do not keep our own backups of your data. Our database provider may keep short-lived technical logs and infrastructure copies that we cannot access, and these are removed on the provider's own schedule.</p>
 
     <p>See also the full <a href="/iron-commissar/privacy.html">Privacy Policy</a>.</p>
 
