@@ -3,62 +3,156 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>dddruwu | Apps and projects</title>
-  <meta name="description" content="dddruwu: apps and projects, including Iron Commissar, a hardstyle kettlebell training app for Android.">
+  <title>dddruwu | Apps by Andrew Alvaran</title>
+  <meta name="description" content="Apps by Andrew Alvaran: Iron Commissar, a hardstyle kettlebell training app for Android, and LEANR, a body composition tracker for Android (coming soon).">
+  <meta name="theme-color" content="#121214">
   <link rel="canonical" href="https://dddruwu.com/">
+
+  <!-- Link preview card when the site is shared -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="dddruwu">
+  <meta property="og:title" content="dddruwu | Apps by Andrew Alvaran">
+  <meta property="og:description" content="Iron Commissar (live on Google Play) and LEANR (coming soon). Android apps built solo in Sydney.">
+  <meta property="og:url" content="https://dddruwu.com/">
+  <meta property="og:image" content="https://dddruwu.com/assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@700&family=Archivo:wght@500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 
-  <!-- Shared stylesheet used by every page -->
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Home page only. Other pages use /assets/css/style.css (not loaded here on purpose). -->
+  <link rel="stylesheet" href="/assets/css/home.css">
 </head>
 <body>
 
-  <main class="wrap">
+  <!-- Status strip. Update these two lines when a project's status changes. -->
+  <div class="ticker">
+    <span><i class="led led--red"></i>Iron Commissar · live</span>
+    <span><i class="led led--lime"></i>LEANR · closed testing</span>
+    <span>Sydney, AU</span>
+  </div>
 
-    <div class="intro">
-      <h1>dddruwu</h1>
-      <!-- TODO: replace this line with your own one-line bio (who you are / what you build). -->
-      <p class="lede">Apps and projects.</p>
-    </div>
-
-    <section>
-      <h2>Projects</h2>
-      <div class="cards">
-
-        <!-- Project card: Iron Commissar -->
-        <a class="card" href="/iron-commissar/">
-          <h3>Iron Commissar</h3>
-          <p>A hardstyle kettlebell training app for Android.</p>
-          <span class="more">View project &rarr;</span>
-        </a>
-
-        <!-- TODO: add future projects here by copying the whole card block above
-             and changing the link, title and description. -->
-
+  <div class="container top">
+    <header class="panel">
+      <div class="bar">
+        <span>dddruwu.com</span>
+        <nav aria-label="Main">
+          <a href="#projects">Projects</a>
+          <a href="#about">About</a>
+          <a href="mailto:dddruwu@gmail.com">Contact</a>
+        </nav>
       </div>
-    </section>
+      <div class="hero">
+        <h1 class="word">dddruwu</h1>
+        <div class="hero-side">
+          <span class="plate">Projects by Andrew Alvaran</span>
+          <span class="hero-note">Built solo · Sydney</span>
+        </div>
+      </div>
+    </header>
+  </div>
 
-    <!-- TODO: add a Contact section with your contact email, for example:
-    <section>
-      <h2>Contact</h2>
-      <p><a href="mailto:YOUR-EMAIL-HERE">YOUR-EMAIL-HERE</a></p>
-    </section>
-    -->
+  <main id="projects" class="container">
+    <h2 class="sr-only">Projects</h2>
+    <div class="projects">
 
+      <!-- Project 01: Iron Commissar -->
+      <article class="panel module module--red">
+        <div class="strip"></div>
+        <div class="bar">
+          <span>Module 01</span>
+          <span><i class="led led--red"></i>Live</span>
+        </div>
+        <div class="module-body">
+          <div class="stage">
+            <span class="num" aria-hidden="true">01</span>
+            <img src="/assets/img/ic-home.webp" width="460" height="1022" alt="Iron Commissar home screen showing weekly tonnage, sessions and today's workout">
+          </div>
+          <div class="identity">
+            <img src="/assets/img/ic-icon.png" width="120" height="120" alt="">
+            <h2>Iron Commissar</h2>
+          </div>
+          <p class="blurb">Hardstyle kettlebell training for Android.</p>
+          <dl class="spec">
+            <dt>Platform</dt><dd>Android</dd>
+            <dt>Status</dt><dd class="status">Live on Google Play</dd>
+          </dl>
+          <div class="actions">
+            <a class="btn btn--primary" href="/iron-commissar/">Open project →</a>
+            <a class="btn" href="https://play.google.com/store/apps/details?id=com.andrew.ironcommissar">Google Play ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 02: LEANR (no link until it is released) -->
+      <article class="panel module module--lime">
+        <div class="strip"></div>
+        <div class="bar">
+          <span>Module 02</span>
+          <span><i class="led led--lime"></i>Closed testing</span>
+        </div>
+        <div class="module-body">
+          <div class="stage">
+            <span class="num" aria-hidden="true">02</span>
+            <img src="/assets/img/leanr-today.webp" width="460" height="1022" alt="LEANR Today screen showing a daily weight entry and trend weight">
+          </div>
+          <div class="identity">
+            <img src="/assets/img/leanr-icon.png" width="120" height="120" alt="">
+            <h2>LEANR</h2>
+          </div>
+          <p class="blurb">Body composition tracker for Android.</p>
+          <dl class="spec">
+            <dt>Platform</dt><dd>Android</dd>
+            <dt>Status</dt><dd class="status">Closed testing</dd>
+          </dl>
+          <div class="actions">
+            <span class="btn btn--soon">Coming soon</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
   </main>
 
+  <section id="about" class="container about">
+    <article class="panel">
+      <div class="bar">
+        <span>About</span>
+        <span><i class="led led--grey"></i>Andrew Alvaran</span>
+      </div>
+      <div class="about-grid">
+        <div>
+          <h2>Hi, I'm Andrew.</h2>
+          <!-- Draft text: edit freely. -->
+          <p>I'm a Sydney-based developer building Android apps on my own. dddruwu is the name I publish under.</p>
+          <p>I build the tools I want to use myself, then clean them up and release them. Iron Commissar came from my own kettlebell training, and LEANR from tracking my own body composition.</p>
+          <p>By day I work as a business systems analyst, so I care about apps that are simple, honest about your data and easy to delete.</p>
+        </div>
+        <dl class="facts">
+          <div><dt>Based in</dt><dd>Sydney, Australia</dd></div>
+          <div><dt>Builds</dt><dd>Android apps</dd></div>
+          <div><dt>Projects</dt><dd>2 · 1 live, 1 testing</dd></div>
+          <!-- Add social links here later, for example: <a href="https://...">Name ↗</a> -->
+          <div><dt>Elsewhere</dt><dd><a href="https://github.com/dddruwu">GitHub ↗</a></dd></div>
+          <div><dt>Contact</dt><dd><a href="mailto:dddruwu@gmail.com">dddruwu@gmail.com</a></dd></div>
+        </dl>
+      </div>
+    </article>
+  </section>
+
   <footer>
-    <div class="wrap">
+    <div class="container">
+      <p>&copy; 2026 Andrew Alvaran · dddruwu</p>
       <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/iron-commissar/">Iron Commissar</a></li>
-        <li><a href="/iron-commissar/privacy.html">Privacy Policy</a></li>
-        <li><a href="/iron-commissar/delete-account.html">Delete Account</a></li>
+        <li>Iron Commissar:</li>
+        <li><a href="/iron-commissar/privacy.html">Privacy</a></li>
+        <li><a href="/iron-commissar/delete-account.html">Delete account</a></li>
       </ul>
-      <p>&copy; 2026 dddruwu</p>
     </div>
   </footer>
 
