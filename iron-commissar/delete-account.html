@@ -37,7 +37,7 @@
       <li>Tap <strong>Delete account</strong>.</li>
       <li>Confirm when asked.</li>
     </ol>
-    <p>In those versions, deletion on our servers is immediate. Deleting your account on our servers needs an internet connection. If the connection drops, the phone clean-up finishes the next time the app opens with a connection. Your other devices will be signed out the next time they connect. Data already saved on them stays there until you erase it on that device or uninstall the app.</p>
+    <p>In those versions, deletion on our servers is immediate. Deleting your account on our servers needs an internet connection. If the connection drops, the phone clean-up finishes the next time the app opens with a connection. Your other devices are signed out shortly after the account is deleted, when the app next refreshes its sign-in. Data already saved on them stays there until you erase it on that device or uninstall the app.</p>
     <p>In older versions of the app, the "Erase all data" button removes much of your data from your device and our cloud database, but does not remove everything: it does not remove your sign-in account, program progress, trophies, or some other server records. If you use an older version, email us to have your account and data deleted, or update the app if a version that includes Settings &gt; Delete account is available for your device.</p>
 
     <h2>Option 2: Request full account deletion</h2>
@@ -58,6 +58,7 @@
     </ul>
     <p>In those versions, if you are signed in, it also asks our subscription provider, RevenueCat, to delete your purchase record, and then deletes your sign-in account (your email address, name and profile photo, held by Supabase).</p>
     <p>In those versions, the app removes your workout data, settings, trophies, scheduled notifications and the photos or files it created on your device (the exported history file and temporary image files) from your phone.</p>
+    <p>This clean-up removes the data of the account being deleted. In one rare case, if you first used the app as a guest and then signed in, some records from the guest period that could not be merged into your account can stay on that phone until you uninstall the app or clear its storage. We plan to make the app remove these as well in a future update.</p>
     <p>If you email us, we delete your data, your sign-in account and your RevenueCat purchase record.</p>
 
     <h2>What is not deleted</h2>
@@ -65,6 +66,14 @@
       <li>Records held by Google, such as Google Play purchase records and Google's advertising services, are managed by Google and are not deleted by us.</li>
       <li>If you use the app as a guest, your purchase record, identified only by a random ID, is not deleted by the app.</li>
       <li>Data already saved on your other devices stays there until you erase it on that device or uninstall the app.</li>
+      <li>After you delete your account, these stay on your phone until you uninstall the app or clear its storage:
+        <ul>
+          <li>The technical installation identifier created by the Firebase component</li>
+          <li>The app's ad and review pacing counters</li>
+          <li>Your Google consent choice</li>
+          <li>Google's own technical event store</li>
+        </ul>
+      </li>
     </ul>
     <!-- REVISIT: backups line. If the project moves to a paid Supabase plan with backups, this line must be updated. -->
     <p>We do not keep our own backups of your data. Our database provider may keep short-lived technical logs and infrastructure copies that we cannot access, and these are removed on the provider's own schedule.</p>
