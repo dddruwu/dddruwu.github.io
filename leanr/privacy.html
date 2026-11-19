@@ -19,7 +19,7 @@
 
   <div class="kicker">LEANR</div>
   <h1>Privacy<br>Policy</h1>
-  <p class="updated">Last updated: 4 November 2026</p>
+  <p class="updated">Last updated: 20 November 2026</p>
   <p class="nav"><a href="/leanr/terms.html">Read the Terms of Use &rarr;</a></p>
 
   <section class="card card--hero">
@@ -56,7 +56,7 @@
           <tr><td>Up to three photos, with your sex, age, height and weight, during an AI estimate</td><td class="where server">Our server and OpenAI, for seconds. We delete them at once; OpenAI may keep API inputs for up to 30 days for abuse monitoring</td><td>To get the estimate</td></tr>
           <tr><td>A summary of your numbers, during a weekly read (Pro)</td><td class="where server">Our server and OpenAI, for seconds. Same terms as photos</td><td>To write the note</td></tr>
           <tr><td>An anonymous ID</td><td class="where server">Our server and our hosting provider's sign-in records, until you ask us to delete them</td><td>To count AI usage and know who is Pro, without an account</td></tr>
-          <tr><td>A device ID (Android's app-only ID, not your advertising ID)</td><td class="where server">Sent with AI photo requests and promo codes. Kept on our server with the free estimate (about 13 months) and with one-phone promo codes (until 30 days after the code's access ends)</td><td>To stop the free estimate being reused, and to keep a one-phone code on one phone</td></tr>
+          <tr><td>A device ID (Android's app-only ID, not your advertising ID)</td><td class="where server">Sent with AI photo requests, photo credit checks and promo codes. Kept on our server with the free estimate (about 13 months) and with one-phone promo codes (until 30 days after the code's access ends)</td><td>To stop the free estimate being reused, and to keep a one-phone code on one phone</td></tr>
           <tr><td>A short request log: your anonymous ID, which feature, and the time</td><td class="where server">Our server, deleted within 6 hours</td><td>To limit how often each feature can be used</td></tr>
           <tr><td>Your IP address and device type, as with any internet request</td><td class="where server">Our hosting provider's request logs, for a limited time under its own policy</td><td>Running and securing the service</td></tr>
           <tr><td>A promo code, only if you enter one</td><td class="where server">Our server, with your anonymous ID, and for a one-phone code your device ID too, until 30 days after the code's access ends</td><td>To unlock Pro, and to keep a one-phone code on one phone</td></tr>
@@ -125,14 +125,17 @@
     the sign-in record for that ID until you ask us to delete it (see Delete what is on our
     server, below).</p>
     <p><strong>Device ID.</strong> Android gives each app a stable ID for your device. The app sends
-    it with AI photo requests and promo codes. We keep it with the one free AI estimate, so that
+    it with AI photo requests, photo credit checks and promo codes. We keep it with the one free AI estimate, so that
     reinstalling the app doesn't grant another one, and with one-phone promo codes. It is not your
     advertising ID, and it is not used for advertising or for tracking you across apps.</p>
     <p><strong>Google Play billing.</strong> If you subscribe, payment is handled entirely by
     Google Play using the Google account on your phone. We never see your card, your name or your
     email. We use <a href="https://www.revenuecat.com/privacy" rel="noopener">RevenueCat</a> to
-    check whether a subscription is active; it receives your anonymous ID and the purchase details
-    Google Play shares with it, nothing else.</p>
+    check whether a subscription is active. The app asks it each time it opens, so RevenueCat
+    receives your anonymous ID even if you never subscribe, and if you do, the purchase details
+    Google Play shares with it. Like any internet request, these also carry basic technical
+    details: your device model, Android and app versions, language, Google Play country and IP
+    address. RevenueCat does not receive your advertising ID.</p>
     <p><strong>AI usage log.</strong> Our server keeps a row per AI request: your anonymous ID, the
     subscription it belongs to, the kind of request, the time, the AI prompt version, and whether
     the request was refunded; for the free estimate, also your device ID. This is how the monthly
@@ -152,12 +155,14 @@
       <li><strong>Delete everything.</strong> Uninstall the app. All data and photos in the app's
       private folder go with it. Our server keeps only the records described above: AI usage
       rows (deleted after about 13 months), the sign-in record for your anonymous ID, and any
-      promo-code records. They hold no name or contact details. To remove them now, use Delete
-      my data.</li>
+      promo-code records. RevenueCat also keeps a customer record for your anonymous ID. They hold
+      no name or contact details. To remove them now, use Delete my data.</li>
       <li><strong>Delete what is on our server.</strong> In Settings, under Your data, tap Delete
       my data. It opens your email app with your anonymous ID and device ID filled in. Send it and
-      we will delete every server record for either ID, including the sign-in record. Without the
-      IDs we cannot find them, because nothing on our server says who you are.</li>
+      we will delete every server record for either ID, including the sign-in record, and the
+      customer record RevenueCat keeps for your anonymous ID. If you subscribed, Google Play keeps
+      its own record of the purchase under Google's policies. Without the IDs we cannot find
+      them, because nothing on our server says who you are.</li>
       <li><strong>Export.</strong> Pro subscribers can export their history as a CSV file from
       Settings. That file is yours; we don't receive a copy.</li>
       <li><strong>Backup file.</strong> Anyone can make a backup file in Settings, under Your
@@ -185,7 +190,13 @@
       are online.</li>
       <li><strong>Billing.</strong> So Google Play can handle a Pro subscription.</li>
       <li><strong>Advertising ID.</strong> Used by Google AdMob for the banner ads shown to Free
-      users, as described below.</li>
+      users, as described below. On newer Android, the ad services permission does the same job
+      for AdMob.</li>
+      <li><strong>Push-message receiver and install referrer.</strong> These come with Google
+      libraries in the app: the push-message receiver with Firebase Cloud Messaging, which the
+      notifications library includes, and the install referrer with the app information library.
+      LEANR sends no push messages (every reminder is made on the phone), never sets up
+      Firebase, and does not use the install referrer itself.</li>
       <li><strong>Vibrate, keep awake, storage on older Android.</strong> Standard permissions
       that come with the app's libraries: button feedback, finishing a task such as an ad or a
       reminder, and saving your own export or backup file on Android 12 and earlier.</li>
@@ -215,12 +226,13 @@
     server runs on <a href="https://supabase.com/privacy" rel="noopener">Supabase</a>, which hosts
     the anonymous sign-in records, the AI usage and request logs, promo codes and the AI relay. No
     photos or measurements are stored there.</p>
-    <p><strong>Changes.</strong> If this policy changes in a way that affects you, the app will
-    tell you the next time you open it. The date at the top of this page is always the current
-    version.</p>
+    <p><strong>Changes.</strong> If this policy changes, we will update the date at the top of
+    this page. If a change affects what leaves your phone, we will also say so in the update notes
+    on Google Play.</p>
     <p><strong>Reporting AI output.</strong> Every AI photo estimate and weekly read has a
     Report this link. It opens your own email app with a draft addressed to us, already holding
-    what the AI wrote, its date, the prompt version and the app version. The app sends nothing
+    what the AI wrote, its date, the prompt version, the AI model's name when it was recorded
+    and the app version. The app sends nothing
     itself. If you send the email, we receive what is in it, including your email address, and
     use it only to look into the report and improve the AI. Ask and we will delete it.</p>
     <p><strong>Promo codes.</strong> Some codes, such as tester and giveaway codes, work on one
@@ -235,7 +247,9 @@
     to answer you and fix the app. If a screen in LEANR crashes, it offers Email this to us, which
     opens your email app the same way with the error message, technical details of where in the
     app it happened, and the app and Android versions. It does not add your measurements or any
-    ID, and nothing is sent unless you send it. LEANR has no crash reporter of its own.</p>
+    ID, and nothing is sent unless you send it. If LEANR cannot prepare its database when it
+    starts, that screen offers Send feedback, which opens your email app with the error message
+    and the app and Android versions, and no ID. LEANR has no crash reporter of its own.</p>
     <p><strong>Contact.</strong> <a href="mailto:dddruwu@gmail.com">dddruwu@gmail.com</a> · Andrew
     Alvaran · Australia</p>
   </section>
