@@ -178,6 +178,7 @@ main { flex: 1; padding-top: 28px; padding-bottom: 40px; }
 .btn:hover { text-decoration: none; filter: brightness(1.12); }
 .btn--primary { background: var(--red); border-color: var(--red); color: #0b0b0c; font-weight: 700; }
 .btn--soon { border-style: dashed; color: var(--ink-soft); cursor: default; }
+.btn--lime { background: var(--lime); border-color: var(--lime); color: #0b0b0c; font-weight: 700; }
 
 /* ---- About ---- */
 .about { padding-bottom: 64px; }
