@@ -113,11 +113,13 @@ a:focus-visible { outline: 2px solid var(--lime); outline-offset: 3px; }
   display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 24px;
 }
 .word {
-  margin: 0; font-weight: 700; font-size: 150px; line-height: 0.95; letter-spacing: -0.05em;
+  margin: 0; font-weight: 700; font-size: 128px; line-height: 0.95; letter-spacing: -0.05em;
   background: linear-gradient(180deg, #ffffff 0%, #b8b8c0 55%, #6a6a72 100%);
   -webkit-background-clip: text; background-clip: text; color: transparent;
   filter: drop-shadow(0 3px 0 rgba(0, 0, 0, 0.55));
 }
+/* The name sits on two lines: Andrew / Alvaran */
+.word span { display: block; }
 .hero-side { display: flex; flex-direction: column; gap: 12px; align-items: flex-start; }
 .plate {
   display: inline-block; padding: 10px 14px; border-radius: 4px;
@@ -204,6 +206,8 @@ footer .container {
 }
 footer ul { display: flex; flex-wrap: wrap; gap: 4px 24px; margin: 0; padding: 0; list-style: none; }
 footer li a { display: inline-block; padding: 12px 0; }
+/* Project labels ("Iron Commissar:", "LEANR:") line up with their links */
+footer li:not(:has(a)) { padding: 12px 0; }
 footer p { margin: 0; padding: 12px 0; }
 
 /* ---- Phones and small screens ---- */
@@ -227,7 +231,7 @@ footer p { margin: 0; padding: 12px 0; }
 
   .hero { padding: 32px 20px 28px; }
   /* Sized from the screen width (vw), so phone font-size settings cannot make it overflow */
-  .word { font-size: clamp(40px, 16vw, 68px); }
+  .word { font-size: clamp(36px, 15vw, 64px); }
   .plate { max-width: 100%; font-size: 11px; letter-spacing: 0.08em; }
   .hero-note { font-size: 11px; }
 
