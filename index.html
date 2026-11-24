@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Andrew Alvaran | Business systems analyst and Android developer</title>
   <meta name="description" content="Andrew Alvaran, a senior business systems analyst in Sydney who also builds Android apps: Iron Commissar and LEANR, both live on Google Play.">
-  <meta name="theme-color" content="#121214">
+  <meta name="theme-color" content="#f8f9fa">
   <link rel="canonical" href="https://dddruwu.com/">
 
   <!-- Link preview card when the site is shared -->
@@ -21,114 +21,79 @@
   <link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-
   <!-- Home page only. Other pages use /assets/css/style.css (not loaded here on purpose). -->
   <link rel="stylesheet" href="/assets/css/home.css">
 </head>
 <body>
 
-  <!-- Status strip. Update these two lines when a project's status changes. -->
-  <div class="ticker">
-    <span><i class="led led--red"></i>Iron Commissar · live</span>
-    <span><i class="led led--lime"></i>LEANR · live</span>
-    <span>Sydney, AU</span>
+  <!-- Top bar -->
+  <div class="topbar">
+    <div class="container">
+      <span class="site">dddruwu.com</span>
+      <nav aria-label="Main">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="mailto:drewalvaran@gmail.com">Email</a>
+      </nav>
+    </div>
   </div>
 
-  <div class="container top">
-    <header class="panel">
-      <div class="bar">
-        <span>dddruwu.com</span>
-        <nav aria-label="Main">
-          <a href="#projects">Projects</a>
-          <a href="#about">About</a>
-          <a href="mailto:drewalvaran@gmail.com">Contact</a>
-        </nav>
-      </div>
-      <div class="hero">
-        <h1 class="word"><span>Andrew</span> <span>Alvaran</span></h1>
-        <div class="hero-side">
-          <span class="plate">Business systems analyst · Android developer</span>
-          <span class="hero-note">Sydney · apps published as dddruwu</span>
-        </div>
-      </div>
-    </header>
-  </div>
+  <header class="container hero">
+    <span class="label">Sydney, Australia</span>
+    <h1 class="word">Andrew Alvaran</h1>
+    <p class="role">Business systems analyst · Android developer</p>
+    <p class="open">Open to roles, freelance work and collaborations</p>
+  </header>
 
-  <main id="projects" class="container">
-    <h2 class="sr-only">Projects</h2>
-    <div class="projects">
+  <main>
+    <section id="projects" class="container">
+      <div class="section-head"><span class="label">01</span><h2>Projects</h2></div>
+      <div class="projects">
 
-      <!-- Project 01: Iron Commissar -->
-      <article class="panel module module--red">
-        <div class="strip"></div>
-        <div class="bar">
-          <span>Module 01</span>
-          <span><i class="led led--red"></i>Live</span>
-        </div>
-        <div class="module-body">
+        <!-- Project 01: Iron Commissar. To add a project, copy one whole <article> block. -->
+        <article class="card card--red">
+          <div class="card-head">
+            <img src="/assets/img/ic-icon.png" width="120" height="120" alt="">
+            <h3>Iron Commissar</h3>
+            <span class="pill">Live</span>
+          </div>
           <div class="stage">
-            <span class="num" aria-hidden="true">01</span>
             <img src="/assets/img/ic-home.webp" width="460" height="1022" alt="Iron Commissar home screen showing weekly tonnage, sessions and today's workout">
           </div>
-          <div class="identity">
-            <img src="/assets/img/ic-icon.png" width="120" height="120" alt="">
-            <h2>Iron Commissar</h2>
-          </div>
           <p class="blurb">Hardstyle kettlebell training for Android.</p>
-          <dl class="spec">
-            <dt>Platform</dt><dd>Android</dd>
-            <dt>Status</dt><dd class="status">Live on Google Play</dd>
-          </dl>
+          <p class="meta">Google Play · 10,000+ downloads · 4.25★</p>
           <div class="actions">
             <a class="btn btn--primary" href="/iron-commissar/">Open project →</a>
             <a class="btn" href="https://play.google.com/store/apps/details?id=com.andrew.ironcommissar">Google Play ↗</a>
           </div>
-        </div>
-      </article>
+        </article>
 
-      <!-- Project 02: LEANR -->
-      <article class="panel module module--lime">
-        <div class="strip"></div>
-        <div class="bar">
-          <span>Module 02</span>
-          <span><i class="led led--lime"></i>Live</span>
-        </div>
-        <div class="module-body">
+        <!-- Project 02: LEANR -->
+        <article class="card card--lime">
+          <div class="card-head">
+            <img src="/assets/img/leanr-icon.png" width="120" height="120" alt="">
+            <h3>LEANR</h3>
+            <span class="pill">Live</span>
+          </div>
           <div class="stage">
-            <span class="num" aria-hidden="true">02</span>
             <img src="/assets/img/leanr-today.webp" width="460" height="1022" alt="LEANR Today screen showing a daily weight entry and trend weight">
           </div>
-          <div class="identity">
-            <img src="/assets/img/leanr-icon.png" width="120" height="120" alt="">
-            <h2>LEANR</h2>
-          </div>
           <p class="blurb">Body composition tracker for Android.</p>
-          <dl class="spec">
-            <dt>Platform</dt><dd>Android</dd>
-            <dt>Status</dt><dd class="status">Live on Google Play</dd>
-          </dl>
+          <p class="meta">Google Play · Released November 2026</p>
           <div class="actions">
-            <a class="btn btn--lime" href="/leanr/">Open project →</a>
+            <a class="btn btn--primary" href="/leanr/">Open project →</a>
             <a class="btn" href="https://play.google.com/store/apps/details?id=com.leanr.app">Google Play ↗</a>
           </div>
-        </div>
-      </article>
+        </article>
 
-    </div>
-  </main>
-
-  <section id="about" class="container about">
-    <article class="panel">
-      <div class="bar">
-        <span>About</span>
-        <span><i class="led led--grey"></i>Andrew Alvaran</span>
       </div>
+    </section>
+
+    <section id="about" class="container about">
+      <div class="section-head"><span class="label">02</span><h2>About</h2></div>
       <div class="about-grid">
-        <div>
-          <h2>Hi, I'm Andrew.</h2>
+        <div class="about-text">
+          <h3>Hi, I'm Andrew.</h3>
           <p>I'm a senior business systems analyst in Sydney with over 10 years across transport, logistics, retail, media and utilities. I've led system go-lives, set up EDI and integrations with partners, and supported SAP and the operational systems businesses run on every day.</p>
           <p>I also design, build and ship Android apps on my own. I write the requirements first, then build with AI coding tools (Claude Code, React Native and Expo), review every change and test on real devices.</p>
           <p>Iron Commissar came from my kettlebell training. It went from idea to Google Play in three months and has passed 10,000 downloads with a 4.25-star rating. LEANR came from tracking my own body composition and is now live too.</p>
@@ -146,8 +111,8 @@
           <div><dt>Contact</dt><dd><a href="mailto:drewalvaran@gmail.com">Email me ↗</a></dd></div>
         </dl>
       </div>
-    </article>
-  </section>
+    </section>
+  </main>
 
   <footer>
     <div class="container">
