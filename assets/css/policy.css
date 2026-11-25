@@ -1,0 +1,87 @@
+/* =====================================================
+   dddruwu.com policy pages stylesheet ("Swiss Blueprint")
+   Used by the privacy, terms and delete-account pages.
+   It only changes how the pages look. The policy text lives
+   in each page's HTML and is not affected by this file.
+   ===================================================== */
+
+/* ---- Fonts: IBM Plex, hosted on this site (no third-party requests) ---- */
+@font-face { font-family: "IBM Plex Sans"; font-weight: 400; font-style: normal; font-display: swap; src: url("/assets/fonts/ibm-plex-sans-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "IBM Plex Sans"; font-weight: 600; font-style: normal; font-display: swap; src: url("/assets/fonts/ibm-plex-sans-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "IBM Plex Sans"; font-weight: 700; font-style: normal; font-display: swap; src: url("/assets/fonts/ibm-plex-sans-latin-700-normal.woff2") format("woff2"); }
+@font-face { font-family: "IBM Plex Mono"; font-weight: 500; font-style: normal; font-display: swap; src: url("/assets/fonts/ibm-plex-mono-latin-500-normal.woff2") format("woff2"); }
+
+:root {
+  --canvas: #f8f9fa; --card: #ffffff; --well: #f1f3f5; --line: #dde2e7;
+  --ink: #111318; --muted: #4b5563; --link: #0f62fe;
+  --sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Consolas, "Courier New", monospace;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { background: var(--canvas); color-scheme: light; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body { margin: 0; background: var(--canvas); color: var(--ink); font: 400 17px/1.65 var(--sans); border-top: 3px solid var(--ink); }
+a { color: var(--link); }
+a:focus-visible { outline: 2px solid var(--link); outline-offset: 3px; border-radius: 2px; }
+
+/* Centered reading column */
+.wrap { max-width: 1088px; margin: 0 auto; padding: 0 24px; }
+.wrap.narrow { max-width: 760px; }
+
+/* ---- Top bar: link back to the home page ---- */
+.site-header { border-bottom: 1px solid var(--line); }
+.site-header a { display: inline-block; padding: 14px 0; font: 500 13px/1.4 var(--mono); color: var(--ink); text-decoration: none; }
+.site-header a:hover { text-decoration: underline; }
+
+/* ---- Page title ---- */
+.page-head { padding: 40px 0 20px; margin-bottom: 28px; border-bottom: 1px solid var(--line); }
+.eyebrow, .kicker { margin: 0 0 8px; font: 500 12px/1.4 var(--mono); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+.kicker { margin-top: 40px; }
+h1 { margin: 0 0 10px; font-size: clamp(34px, 7vw, 52px); font-weight: 700; line-height: 1.05; letter-spacing: -0.03em; }
+.updated { margin: 0; font-size: 14px; color: var(--muted); }
+.nav { margin: 14px 0 28px; }
+
+/* ---- Body text ---- */
+.prose h2 { margin: 40px 0 12px; font-size: 22px; font-weight: 600; letter-spacing: -0.01em; line-height: 1.25; }
+.prose h3 { margin: 26px 0 8px; font-size: 17px; font-weight: 600; }
+.prose h2 .num, .prose h2 .n { margin-right: 10px; font: 500 14px/1 var(--mono); color: var(--muted); }
+.prose p, .prose li { color: #2b303a; }
+.prose p { margin: 0 0 14px; }
+.prose ul, .prose ol { margin: 0 0 14px; padding-left: 22px; }
+.prose li { margin-bottom: 6px; }
+.prose strong { color: var(--ink); font-weight: 600; }
+
+/* ---- Tables ---- */
+.table-scroll { overflow-x: auto; margin: 8px 0 16px; }
+.prose table { width: 100%; border-collapse: collapse; margin: 8px 0 16px; font-size: 14.5px; background: var(--card); border: 1px solid var(--line); }
+.table-scroll table { margin: 0; min-width: 560px; }
+.prose th, .prose td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; overflow-wrap: anywhere; }
+.prose th { font: 500 12px/1.4 var(--mono); text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); background: var(--well); }
+.prose tr:last-child td { border-bottom: 0; }
+.prose td.server { background: #fff8e6; }   /* rows where data leaves the phone */
+
+/* ---- Cards (LEANR pages group each topic in a card) ---- */
+.card { margin: 0 0 20px; padding: 22px 24px; background: var(--card); border: 1px solid var(--line); border-radius: 6px; }
+.card h2 { margin-top: 0; }
+.card > :last-child { margin-bottom: 0; }
+.card--hero { border-top: 3px solid var(--ink); }
+.card--warn { border-left: 3px solid #b45309; }
+
+/* Highlighted contact email */
+.contact-box { margin-top: 12px; padding: 16px 20px; background: var(--card); border: 1px solid var(--line); border-left: 3px solid var(--ink); border-radius: 4px; }
+.contact-box p { margin: 0; }
+.contact-box a { font-weight: 600; }
+
+/* ---- Footers: the small line inside the page, then the site footer ---- */
+footer { margin-top: 40px; padding: 16px 0 28px; border-top: 1px solid var(--line); font-size: 14px; color: var(--muted); }
+main footer { padding-bottom: 0; }
+footer ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 0 24px; }
+footer li a { display: inline-block; padding: 10px 0; color: var(--ink); }
+footer p { margin: 6px 0 0; }
+
+@media (max-width: 760px) {
+  .wrap { padding: 0 16px; }
+  .card { padding: 18px 16px; }
+  .page-head { padding-top: 28px; }
+  .kicker { margin-top: 28px; }
+}
