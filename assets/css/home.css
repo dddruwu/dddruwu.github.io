@@ -1,7 +1,7 @@
 /* =====================================================
    dddruwu.com home page stylesheet (design "Swiss Blueprint")
-   Used ONLY by /index.html. The other pages keep using
-   /assets/css/style.css, which is not touched.
+   Used ONLY by /index.html. Project pages use project.css
+   and policy pages use policy.css.
    Light page, white cards, thin grey lines. The only strong
    colours are each app's own accent, kept inside its card.
    ===================================================== */
