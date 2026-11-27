@@ -120,6 +120,18 @@ main { flex: 1; }
 .btn--primary { background: var(--ink); color: #fff; }
 .btn--primary:hover { background: #2a2e37; }
 
+/* ---- Experience ---- */
+.experience { padding-bottom: 48px; }
+.exp-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.exp { background: var(--card); border: 1px solid var(--line); border-radius: 6px; padding: 20px; }
+.exp h3 { margin: 8px 0 8px; font-size: 20px; font-weight: 600; letter-spacing: -0.01em; line-height: 1.25; }
+.exp p { margin: 0; color: var(--muted); font-size: 16px; }
+
+/* Career timeline: year range on the left, role on the right */
+.timeline { list-style: none; margin: 28px 0 0; padding: 0; border-top: 1px solid var(--line); }
+.timeline li { display: grid; grid-template-columns: 150px 1fr; gap: 4px 20px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+.timeline .when { font: 500 13px/1.9 var(--mono); color: var(--muted); }
+
 /* ---- About ---- */
 .about { padding-bottom: 56px; }
 .about-grid { display: grid; grid-template-columns: 3fr 2fr; gap: 0 40px; }
@@ -154,6 +166,8 @@ footer li a { color: var(--ink); }
   .card-head h3 { font-size: 22px; }
   .stage { height: 260px; }
   .stage img { width: 180px; }
+  .exp-grid { grid-template-columns: 1fr; }
+  .timeline li { grid-template-columns: 1fr; }
   .about-grid { grid-template-columns: 1fr; gap: 28px; }
   .about-text { padding-right: 0; border-right: 0; }
   footer .footer-links { align-items: flex-start; }

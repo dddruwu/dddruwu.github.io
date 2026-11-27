@@ -1,0 +1,5 @@
+# Everyone may crawl this site
+User-agent: *
+Allow: /
+
+Sitemap: https://dddruwu.com/sitemap.xml

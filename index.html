@@ -23,6 +23,23 @@
 
   <!-- Home page only. Other pages use /assets/css/style.css (not loaded here on purpose). -->
   <link rel="stylesheet" href="/assets/css/home.css">
+  <!-- Tells search engines who this site is about (data only, not a program) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Andrew Alvaran",
+    "url": "https://dddruwu.com/",
+    "jobTitle": "Senior Business Systems Analyst",
+    "description": "Senior business systems analyst in Sydney who also builds and ships Android apps.",
+    "address": { "@type": "PostalAddress", "addressLocality": "Sydney", "addressCountry": "AU" },
+    "sameAs": [
+      "https://www.linkedin.com/in/andrewalvaran/",
+      "https://github.com/dddruwu",
+      "https://www.threads.com/@dddruwu"
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -32,6 +49,7 @@
       <span class="site">dddruwu.com</span>
       <nav aria-label="Main">
         <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
         <a href="#about">About</a>
         <a href="mailto:drewalvaran@gmail.com">Email</a>
       </nav>
@@ -89,8 +107,49 @@
       </div>
     </section>
 
+    <section id="experience" class="container experience">
+      <div class="section-head"><span class="label">02</span><h2>Experience</h2></div>
+      <div class="exp-grid">
+
+        <!-- Career highlights. To add one, copy a whole <article> block. -->
+        <article class="exp">
+          <span class="label">Implementations</span>
+          <h3>Rail terminal system go-lives</h3>
+          <p>Lead BA for a rail terminal operating system and an automated gate system, from requirements and vendor coordination through testing, go-live and training. System owner for both since 2023.</p>
+        </article>
+
+        <article class="exp">
+          <span class="label">Integration</span>
+          <h3>EDI and partner integrations</h3>
+          <p>Set up EDI with three shipping lines and two customers, writing the field-level mapping documents and running the testing. Earlier, delivered retail label EDI with two department stores and a 3PL warehouse migration with zero business disruption.</p>
+        </article>
+
+        <article class="exp">
+          <span class="label">Commercial and reporting</span>
+          <h3>Rates, invoicing and reporting</h3>
+          <p>Maintain contract rates for around 30 customers so terminal movements create the correct charges, audit invoices against them, and build Power BI and Excel reports for management, finance and senior leadership.</p>
+        </article>
+
+        <article class="exp">
+          <span class="label">SAP and IT operations</span>
+          <h3>SAP support and running IT</h3>
+          <p>Functional SAP support (MM, SD, WM, FI) across retail and utilities. Ran IT for the Australian arm of a global fashion retailer, including moving 30 staff to remote work in 2020.</p>
+        </article>
+
+      </div>
+
+      <!-- Career timeline: roles and industries only -->
+      <ol class="timeline">
+        <li><span class="when">2021 to now</span><span class="what">Senior Business Systems Analyst · transport and logistics</span></li>
+        <li><span class="when">2018 to 2021</span><span class="what">IT Team Leader · fashion retail</span></li>
+        <li><span class="when">2017 to 2018</span><span class="what">Sales and Traffic Systems Analyst · media</span></li>
+        <li><span class="when">2016 to 2017</span><span class="what">SAP Service Delivery Analyst · environmental services</span></li>
+        <li><span class="when">2010 to 2016</span><span class="what">SAP Business Analyst · electricity utility</span></li>
+      </ol>
+    </section>
+
     <section id="about" class="container about">
-      <div class="section-head"><span class="label">02</span><h2>About</h2></div>
+      <div class="section-head"><span class="label">03</span><h2>About</h2></div>
       <div class="about-grid">
         <div class="about-text">
           <h3>Hi, I'm Andrew.</h3>
